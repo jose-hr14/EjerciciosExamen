@@ -245,6 +245,18 @@ namespace EjerciciosExamen
         //****
         //****
 
+        public static void EjercicioCasa(int n)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                for (int u = 1; u < n; u++)
+                    System.Console.Write("*");
+
+                System.Console.WriteLine("*");
+            }
+        }
+             
+
 
     }
 }
