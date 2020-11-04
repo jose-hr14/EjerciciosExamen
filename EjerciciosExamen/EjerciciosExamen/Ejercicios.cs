@@ -247,16 +247,128 @@ namespace EjerciciosExamen
 
         public static void EjercicioCasa(int n)
         {
-            for (int i = 0; i < n; i++)
+            for (int r = 0; r < n; r++)
             {
-                for (int u = 1; u < n; u++)
+                for (int c = 0; c < n; c++)
                     System.Console.Write("*");
-
-                System.Console.WriteLine("*");
+                System.Console.WriteLine();
             }
         }
-             
 
+        //Funcion que devuelva el menor de 16 enteros pero
+        //debe ocupar una sola línea
+        public static int Ejercicio16(int n1, int n2, int n3, int n4, int n5, 
+            int n6, int n7, int n8, int n9, int n10, int n11, int n12, int n13,
+            int n14, int n15, int n16)
+        {
+            int menor1 = Ejercicio10(n1, n2, n3, n4);
+            int menor2 = Ejercicio10(n5, n6, n7, n8);
+            int menor3 = Ejercicio10(n9, n10, n11, n12);
+            int menor4 = Ejercicio10(13, n14, n15, n16);
+            return Ejercicio10(menor1, menor2, menor3, menor4);
+        }
+        
+        //Igual que la de casa, solo que en lugar de imprimir astericos, es en plan
+        //(4)
+        //****
+        //++++
+        //****
+        //++++
+        //Variables r, i, c
+        public static void Ejercicio17(int n)
+        {
+            for (int r = 0; r < n; r++)
+            {
+                for (int c = 0; c < n; c++)
+                {
+                    if ((r % 2) == 0)
+                        System.Console.Write("*");
+                    else
+                        System.Console.Write("+");
+                }
+                System.Console.WriteLine();
+            }
+        }
+
+        //Funcion igual que la anterior, pero que imprima 
+        //*+*+
+        //+*+*
+        //*+*+
+        //+*+*
+        public static void Ejercicio18(int n)
+        {
+            for (int r = 0; r < n; r++)
+            {
+                for (int c = 0; c < n; c++)
+                {
+                    if ((c % 2) == 0)
+                        System.Console.Write("*");
+                    else
+                        System.Console.Write("+");
+                }
+                System.Console.WriteLine();
+            }
+        }
+
+        public static void Ejercicio18Sol(int n)
+        {
+            for (int r = 0; r < n; r++)
+            {
+               for(int c = 0; c < n; c++)
+                {
+                    int flag = r + c;
+                    if ((flag % 2) == 0)
+                        System.Console.Write("*");
+                    else
+                        System.Console.Write("+");
+
+                }
+                System.Console.WriteLine();
+            }
+            
+        }
+        //recibe un numero, pero lo que imprime es
+        //4
+        //*
+        //**
+        //***
+        //****
+        public static void Ejercicio19(int n)
+        {
+            for (int r = 0; r < n; r++)
+            {                
+                for (int c = 0; c <= r; c++)
+                {                    
+                    System.Console.Write("*");
+                }
+                System.Console.WriteLine();
+            }
+        }
+
+        //Como el anterior pero
+        //4
+        //   *
+        //  **
+        // ***
+        //****
+        //Si le pasaramos un cinco, la primera seria no comenzaria con 3 espacios, sino con 4, ocupando 5 caracteres en tortal
+
+        public static void Ejercicio20(int n)
+        {
+            for (int r = 0; r < n; r++)
+            {
+                int nEspacios = n - r - 1; // n - (r + 1);               
+                int nAsteriscos = r + 1;
+            }
+                
+
+
+            
+                
+
+        }
 
     }
+
+
 }
