@@ -14,7 +14,8 @@ namespace EjerciciosExamen
             //Ejercicios.EjercicioCasa(3);
             //Ejercicios.Ejercicio17(4);
             //Ejercicios.Ejercicio18Sol(4);
-            Ejercicios.Ejercicio19(4);
+            //Ejercicios.Ejercicio19(4);
+            Ejercicios.Ejercicio20(4);
         }
     }
 }

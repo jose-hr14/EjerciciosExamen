@@ -359,6 +359,12 @@ namespace EjerciciosExamen
             {
                 int nEspacios = n - r - 1; // n - (r + 1);               
                 int nAsteriscos = r + 1;
+
+                for (int c = 0; c < nEspacios; c++)
+                    System.Console.Write(" _ ");
+                for (int i = 0; i < nAsteriscos; i++)
+                    System.Console.Write(" * ");
+                System.Console.WriteLine();
             }
                 
 
