@@ -442,6 +442,12 @@ namespace EjerciciosExamen
         //
         // * _ * _ * _ *****
         // _ * _ * _ * *****
+        // * _ * _ * _
+        // _* _ * _*
+        // *****************
+        // *****************
+        //
+        //
         // *****************
         public static void Ejercicio26()
         {
@@ -454,6 +460,7 @@ namespace EjerciciosExamen
                     if (c >= 0 && c <= 5 && r >= 0 && r <= 2)
                     {
                         flag += 1; //Aquí hay que hacer los espacios de los puntos
+                        //if flag par, punto, else espacio
                         System.Console.Write(".");
                     }                        
                     else if (((r / 2) % 2) == 0)
@@ -464,6 +471,19 @@ namespace EjerciciosExamen
                 System.Console.WriteLine();
             }
         }
+
+        //Practica de hacer una app con un menú, con opciones que hacen una única cosa. las funciones en model, interfaz en visual con todo lo que se imprime, y controller 
+        //1) Potencia en base 2
+        //2) Sacar el sumatorio ( el sumatorio de 10 es, 1 + 2 + 3+ 4+5+6+7+8+9+10 = resultado
+        //3) ! factorial de 10: 1*2*3*4*5*6*7*8*9*10
+        //4) Saber si un número es primo
+        //5) Imprimir la serie de fibonacci
+        //0) Salir
+
+
+
+        //Hacer circ
+
 
     }
 
