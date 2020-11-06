@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.ExceptionServices;
 using System.Text;
 
 namespace EjerciciosExamen
@@ -362,16 +363,106 @@ namespace EjerciciosExamen
 
                 for (int c = 0; c < nEspacios; c++)
                     System.Console.Write(" _ ");
-                for (int i = 0; i < nAsteriscos; i++)
+                for (int c = 0; c < nAsteriscos; c++)
                     System.Console.Write(" * ");
                 System.Console.WriteLine();
+            }                                           
+        }
+
+        //Funcion que imprima por pantalla los numeros divisores del número dado
+        public static void Ejercicio21(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                    System.Console.Write(i + ", ");
             }
-                
+        }
 
+        //_ _ _ _ * *
+        //_ _ _ * _ _ *
+        //_ _ * _ _ _ _ *
+        //_ * _ _ _ _ _ _ *
+        //* _ _ _ _ _ _ _ _ *
+        public static void Ejercicio22(int n)
+        {
+            for (int r = 0; r < n; r++)
+            {
+                int nEspacios1 = n - r - 1;
+                int nEspacios2 = 2 * r;
 
+                for (int c = 0; c < nEspacios1; c++)
+                    System.Console.Write(" _ ");
+                System.Console.Write(" * ");
+                for (int c = 0; c < nEspacios2; c++)
+                    System.Console.Write(" _ ");
+                System.Console.WriteLine(" * ");
+            }
             
-                
+        }
+        //Al reves que la anterior
+        //El anterior, invertido
 
+        public static void Ejercicio23(int n)
+        {
+            for (int r = 0; r < n; r++)
+            {
+                int nEspacios1 = r;
+                int nEspacios2 = (n - r - 1) * 2;
+
+                for (int c = 0; c < nEspacios1; c++)
+                    System.Console.Write(" * ");
+                for (int c = 0; c < nEspacios2; c++)
+                    System.Console.Write(" _ ");
+                System.Console.WriteLine(" * ");
+
+            }
+            
+        }
+
+        public static void Ejercicio24(int n)
+        {
+            for (int r = 0; r < n; r++)
+            {
+                Ejercicio22(n);
+                Ejercicio23(n);
+            }
+        }
+
+        //Funcion que devuelva 2 elevado a 1 número entero
+        public static int Ejercicio25(int n)
+        {
+            int result = 1;
+            for (int i = 0; i < n; i++)
+                result *= 2;
+            return result;
+        }
+        //for r > 8
+        //for c < 20
+        //
+        // * _ * _ * _ *****
+        // _ * _ * _ * *****
+        // *****************
+        public static void Ejercicio26()
+        {
+            int flag = 1;
+
+            for ( int r = 0; r < 10; r++)
+            {
+                for (int c = 0; c < 20; c++)
+                {
+                    if (c >= 0 && c <= 5 && r >= 0 && r <= 2)
+                    {
+                        flag += 1; //Aquí hay que hacer los espacios de los puntos
+                        System.Console.Write(".");
+                    }                        
+                    else if (((r / 2) % 2) == 0)
+                        System.Console.Write("*");
+                    else 
+                        System.Console.Write("_");
+                }
+                System.Console.WriteLine();
+            }
         }
 
     }

@@ -15,7 +15,13 @@ namespace EjerciciosExamen
             //Ejercicios.Ejercicio17(4);
             //Ejercicios.Ejercicio18Sol(4);
             //Ejercicios.Ejercicio19(4);
-            Ejercicios.Ejercicio20(4);
+            //Ejercicios.Ejercicio20(4);
+            //Ejercicios.Ejercicio21(10);
+            //Ejercicios.Ejercicio22(5);
+            //Ejercicios.Ejercicio23(5);
+            //Ejercicios.Ejercicio25(10);
+            Ejercicios.Ejercicio26();
+
         }
     }
 }
