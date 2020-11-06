@@ -19,6 +19,7 @@ namespace EjerciciosExamen
             //Ejercicios.Ejercicio21(10);
             //Ejercicios.Ejercicio22(5);
             //Ejercicios.Ejercicio23(5);
+            //Ejercicios.Ejercicio24(5);
             //Ejercicios.Ejercicio25(10);
             Ejercicios.Ejercicio26();
 

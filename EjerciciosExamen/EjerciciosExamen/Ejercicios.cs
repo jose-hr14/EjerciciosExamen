@@ -411,7 +411,8 @@ namespace EjerciciosExamen
                 int nEspacios2 = (n - r - 1) * 2;
 
                 for (int c = 0; c < nEspacios1; c++)
-                    System.Console.Write(" * ");
+                    System.Console.Write(" _ ");
+                System.Console.Write(" * ");
                 for (int c = 0; c < nEspacios2; c++)
                     System.Console.Write(" _ ");
                 System.Console.WriteLine(" * ");
@@ -421,12 +422,9 @@ namespace EjerciciosExamen
         }
 
         public static void Ejercicio24(int n)
-        {
-            for (int r = 0; r < n; r++)
-            {
-                Ejercicio22(n);
-                Ejercicio23(n);
-            }
+        {            
+            Ejercicio22(n);
+            Ejercicio23(n);           
         }
 
         //Funcion que devuelva 2 elevado a 1 número entero
@@ -451,22 +449,26 @@ namespace EjerciciosExamen
         // *****************
         public static void Ejercicio26()
         {
-            int flag = 1;
+            
 
             for ( int r = 0; r < 10; r++)
             {
                 for (int c = 0; c < 20; c++)
                 {
+                    int flag = c + r;
                     if (c >= 0 && c <= 5 && r >= 0 && r <= 2)
                     {
-                        flag += 1; //Aquí hay que hacer los espacios de los puntos
+                         //Aquí hay que hacer los espacios de los puntos
                         //if flag par, punto, else espacio
-                        System.Console.Write(".");
+                        if (flag % 2 == 0)
+                            System.Console.Write(" . ");
+                        else
+                            System.Console.Write(" _ ");
                     }                        
                     else if (((r / 2) % 2) == 0)
-                        System.Console.Write("*");
+                        System.Console.Write(" * ");
                     else 
-                        System.Console.Write("_");
+                        System.Console.Write(" _ ");
                 }
                 System.Console.WriteLine();
             }
