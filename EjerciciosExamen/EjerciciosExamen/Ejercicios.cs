@@ -484,7 +484,16 @@ namespace EjerciciosExamen
 
 
 
-        //Hacer circ
+        //Sumatorio z6= 1+2+3+4+5+6
+        public static int Ejercicio27(int n)
+        {
+            int sumatorio = 0;
+            for (int i = 0; i <= n; n++)            
+                sumatorio += i;
+            
+            return sumatorio;
+        }
+
 
 
     }

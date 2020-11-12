@@ -21,7 +21,8 @@ namespace EjerciciosExamen
             //Ejercicios.Ejercicio23(5);
             //Ejercicios.Ejercicio24(5);
             //Ejercicios.Ejercicio25(10);
-            Ejercicios.Ejercicio26();
+            //Ejercicios.Ejercicio26();
+            Ejercicios.Ejercicio27(6);
 
         }
     }
