@@ -461,14 +461,14 @@ namespace EjerciciosExamen
                          //Aquí hay que hacer los espacios de los puntos
                         //if flag par, punto, else espacio
                         if (flag % 2 == 0)
-                            System.Console.Write(" . ");
+                            System.Console.Write(" * ");
                         else
-                            System.Console.Write(" _ ");
+                            System.Console.Write("   ");
                     }                        
                     else if (((r / 2) % 2) == 0)
                         System.Console.Write(" * ");
                     else 
-                        System.Console.Write(" _ ");
+                        System.Console.Write("   ");
                 }
                 System.Console.WriteLine();
             }
