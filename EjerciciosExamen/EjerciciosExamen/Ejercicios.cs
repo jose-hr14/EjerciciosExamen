@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Runtime.ExceptionServices;
 using System.Text;
 
@@ -493,6 +494,139 @@ namespace EjerciciosExamen
             
             return sumatorio;
         }
+
+        /*
+                Crea un programa que le pida al usuario un ancho y un alto e imprima, en
+                referencia a los valores que ha introducido el usuario una bandera a franjas (de 2
+                líneas) con un triángulo. Por ejemplo, si el usuario ha introducido 30 x 9. Imprimirá:
+            1    +*****************************
+            2    ++****************************
+            3    +++
+            4    ++++**************************
+            5    +++++*************************
+            6    ++++
+            7    +++***************************
+            8    ++****************************
+            9    +
+        if ((r + 3) % 3 != 0)
+                    {
+                        Console.Write("*");
+                    }
+        */
+        public static void EjercicioExamen10(int col, int row)
+        {
+            for (int r = 0; r < row; r++)
+            {
+                for (int c = 0; c < col; c++)
+                {
+                    if (c <= r && r <= (row / 2))                    
+                        Console.Write("+");
+                    else if ((r + c) < row && r > (row / 2))
+                        Console.Write("+");
+                    else if ((r + 1 + 3) % 3 != 0)                    
+                        Console.Write("*");                    
+                }
+                Console.WriteLine();
+            }
+        }
+        public static double GetDistance2D(double x1, double y1, double x2, double y2)
+        {
+            double vx = x2 - x1;
+            double vy = y2 - y1;
+            double distance = ((vx * vx) + ( vy * vy));
+            return distance;
+        }
+        public static void FillImage()
+        {
+            for (int r = 0; r < 500; r++)
+            {
+                for (int c = 0; c < 300; c++)
+                {
+                    
+                }
+            }
+        }
+
+        public static void Ejercicio10ExamenA()
+        {
+            Bitmap bitmap = new Bitmap(500, 300);
+            bitmap.SetPixel(bitmap.Width / 2, bitmap.Height / 2, Color.Red);
+            
+            
+            for (int r = 0; r < 500; r++)
+            {
+                for (int c = 0; c < 300; c++)
+                {
+                    bitmap.SetPixel(r, c, Color.Red);
+                }
+            }
+
+            for (int r = 0; r < 500; r++)
+            {
+                for (int c = 0; c < 300; c++)
+                {
+                    if (GetDistance2D(bitmap.Width / 2, bitmap.Height / 2, r, c) > 500)
+                        bitmap.SetPixel(r, c, Color.Blue);
+                }
+            }
+            
+
+            bitmap.Save("C:\\Users\\Joshua\\Desktop\\Entregas\\prueba2.png");
+
+
+
+        }
+
+        public static void EjercicioExamen8()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = i - 3; j < i + 10; j += 3)
+                {
+                    if (i == j)
+                        break;
+                    else if (j == 3)
+                        continue;
+                    System.Console.Write(1 + i + j * 2);
+                }
+            }
+        }
+
+        public static void EjercicioExamen7A(int a)
+        {
+            int result = 0;
+            for (int i = 1; i <= a; i++)
+            {
+                if (i % 5 == 0)
+                    result += i;
+            }
+            Console.WriteLine(result);                
+        }
+
+        public static void EjercicioExamen7B(int a, int b)
+        {
+            int i = 0;
+            while (i <= a || i <= b)
+            {
+                i++;
+                if ((a % i == 0) && (b % i == 0))
+                    Console.Write(i + ", ");
+            }
+        }
+
+        public static void EjercicioExamen6B()
+        {
+            int i = 0;
+            int result = 0;
+            while (i >= 0)
+            {
+                Console.WriteLine(result += i);
+                i = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+
+
 
 
 
